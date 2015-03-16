@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0C3D5CA0EA31337ABCA4F31 /* libPods-testDragonPod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DCBF6576CE143FAB8E8EAB /* libPods-testDragonPod.a */; };
 		DC4291481AB6F54700EC757D /* testDragonPod.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4291471AB6F54700EC757D /* testDragonPod.h */; };
 		DC42914A1AB6F54700EC757D /* testDragonPod.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4291491AB6F54700EC757D /* testDragonPod.m */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1EE227AA07151D05FE6E451E /* Pods-testDragonPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testDragonPod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testDragonPod/Pods-testDragonPod.debug.xcconfig"; sourceTree = "<group>"; };
+		75EB48A555EADEF8C09AAA25 /* Pods-testDragonPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testDragonPod.release.xcconfig"; path = "Pods/Target Support Files/Pods-testDragonPod/Pods-testDragonPod.release.xcconfig"; sourceTree = "<group>"; };
+		D7DCBF6576CE143FAB8E8EAB /* libPods-testDragonPod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testDragonPod.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4291441AB6F54700EC757D /* libtestDragonPod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtestDragonPod.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4291471AB6F54700EC757D /* testDragonPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testDragonPod.h; sourceTree = "<group>"; };
 		DC4291491AB6F54700EC757D /* testDragonPod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testDragonPod.m; sourceTree = "<group>"; };
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C3D5CA0EA31337ABCA4F31 /* libPods-testDragonPod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E80FCEEFDC853444616009F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7DCBF6576CE143FAB8E8EAB /* libPods-testDragonPod.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1001C8CB658B7E025AF9A8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EE227AA07151D05FE6E451E /* Pods-testDragonPod.debug.xcconfig */,
+				75EB48A555EADEF8C09AAA25 /* Pods-testDragonPod.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DC42913B1AB6F54700EC757D = {
 			isa = PBXGroup;
 			children = (
 				DC4291461AB6F54700EC757D /* testDragonPod */,
 				DC4291451AB6F54700EC757D /* Products */,
+				B1001C8CB658B7E025AF9A8C /* Pods */,
+				4E80FCEEFDC853444616009F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,9 +97,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC4291581AB6F54700EC757D /* Build configuration list for PBXNativeTarget "testDragonPod" */;
 			buildPhases = (
+				F1F8DA586CBF3018A99FBDE8 /* Check Pods Manifest.lock */,
 				DC4291401AB6F54700EC757D /* Sources */,
 				DC4291411AB6F54700EC757D /* Frameworks */,
 				DC4291421AB6F54700EC757D /* CopyFiles */,
+				A99B81E1268CFFF208E45307 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -116,6 +142,39 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A99B81E1268CFFF208E45307 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testDragonPod/Pods-testDragonPod-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1F8DA586CBF3018A99FBDE8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC4291401AB6F54700EC757D /* Sources */ = {
@@ -205,8 +264,12 @@
 		};
 		DC4291591AB6F54700EC757D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EE227AA07151D05FE6E451E /* Pods-testDragonPod.debug.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -214,8 +277,12 @@
 		};
 		DC42915A1AB6F54700EC757D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75EB48A555EADEF8C09AAA25 /* Pods-testDragonPod.release.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -240,6 +307,7 @@
 				DC42915A1AB6F54700EC757D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
