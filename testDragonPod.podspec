@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "testDragonPod"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Test DragonPod is a library which is used for testing the pod structure. This is just a dummy summary. So Please leave me alone."
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/arjunthedragon/testDragonPod.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/arjunthedragon/testDragonPod.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
